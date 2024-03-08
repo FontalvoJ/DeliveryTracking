@@ -15,6 +15,23 @@ namespace DeliveryTracking_FIRPLAK_S.A
 
         }
 
-  
+        protected void btn_guardar_Click(object sender, EventArgs e)
+        {
+            cls_pedido objPedido = new cls_pedido();
+
+            string id = txt_id.Text;
+            string fecha = txt_fechapedido.Text;
+            string observaciones = txt_observaciones.Text;
+
+            if (int.TryParse(ddl_cliente.SelectedValue, out int cliente) & int.TryParse(ddl_estadopedido.SelectedValue, out int estadopedido))
+            {
+                objPedido.fnt_agregarpedidos(id, fecha, cliente, estadopedido, observaciones);
+                lbl_mensaje.Text = objPedido.getMensaje();
+            }
+            else
+            {
+                lbl_mensaje.Text = "Error: Los valores de cliente o estado del pedido no son números enteros válidos.";
+            }
+        }
     }
 }

@@ -67,22 +67,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Consultar_Facturas.aspx" />
     <Content Include="frm_camiones.aspx" />
     <Content Include="frm_clientes.aspx" />
     <Content Include="frm_facturacion.aspx" />
     <Content Include="frm_pedidos.aspx" />
-    <Content Include="ConsultaInventario.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cls_camiones.cs" />
     <Compile Include="cls_clientes.cs" />
     <Compile Include="cls_conexion.cs" />
+    <Compile Include="cls_consultar.cs" />
     <Compile Include="cls_facturacion.cs" />
-    <Compile Include="cls_inventario.cs" />
     <Compile Include="cls_pedido.cs" />
-    <Compile Include="ConsultaInventario.aspx.cs">
+    <Compile Include="Consultar_Facturas.aspx.cs">
+      <DependentUpon>Consultar_Facturas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultar_Facturas.aspx.designer.cs">
+      <DependentUpon>Consultar_Facturas.aspx</DependentUpon>
     </Compile>
     <Compile Include="frm_camiones.aspx.cs">
       <DependentUpon>frm_camiones.aspx</DependentUpon>
@@ -122,6 +126,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Imagen\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
