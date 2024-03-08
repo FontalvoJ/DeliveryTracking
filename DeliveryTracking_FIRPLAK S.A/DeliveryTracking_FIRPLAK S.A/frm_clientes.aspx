@@ -36,7 +36,7 @@
                         <a class="nav-link" href="frm_facturacion.aspx"> Facturación </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="frm_mostrar_facturas.aspx"> Detalle Facturación </a>
+                        <a class="nav-link" href="mostrar_facturas.aspx"> Detalle Facturación </a>
                     </li>
                 </ul>
             </div>

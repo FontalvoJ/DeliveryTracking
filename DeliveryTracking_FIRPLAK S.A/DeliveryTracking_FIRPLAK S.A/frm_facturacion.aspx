@@ -37,7 +37,7 @@
                         <a class="nav-link" href="frm_facturacion.aspx">Facturación </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="frm_mostrar_facturas.aspx">Mostrar Facturación </a>
+                        <a class="nav-link" href="mostrar_facturas.aspx">Mostrar Facturación </a>
                     </li>
                 </ul>
             </div>
@@ -101,8 +101,10 @@
                                 <div class="d-flex justify-content-between">
                                     <div>
                                         <asp:Button ID="btn_guardarfact" class="btn btn-dark btn-md mr-2" runat="server" Text="Guardar" OnClick="btn_guardarfact_Click" />
-                                        <asp:Button ID="btn_consultar" Text="Consultar" class="btn btn-dark btn-md mr-2" runat="server" />
-                                        <asp:Button ID="btn_actualizar" Text="Actualizar" class="btn btn-dark btn-md mr-2" runat="server" />
+                                        <asp:Button ID="btn_consultar" Text="Consultar" class="btn btn-dark btn-md mr-2" runat="server" OnClick="btn_consultar_Click"  />
+                                        <asp:Button ID="btn_actualizar" Text="Actualizar" class="btn btn-dark btn-md mr-2" runat="server" OnClick="btn_actualizar_Click" />
+                                        <asp:Button ID="btn_limpiar" Text="Limpiar" class="btn btn-dark btn-md mr-2" runat="server" OnClick="btn_limpiar_Click" />
+                                        
                                     </div>
                                 </div>
                             </div>
