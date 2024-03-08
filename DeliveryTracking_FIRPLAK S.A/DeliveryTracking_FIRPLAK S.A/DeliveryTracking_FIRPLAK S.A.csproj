@@ -71,7 +71,7 @@
     <Content Include="frm_clientes.aspx" />
     <Content Include="frm_facturacion.aspx" />
     <Content Include="frm_pedidos.aspx" />
-    <Content Include="mostrar_facturas.aspx" />
+    <Content Include="ConsultaInventario.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +81,9 @@
     <Compile Include="cls_facturacion.cs" />
     <Compile Include="cls_inventario.cs" />
     <Compile Include="cls_pedido.cs" />
+    <Compile Include="ConsultaInventario.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="frm_camiones.aspx.cs">
       <DependentUpon>frm_camiones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -108,13 +111,6 @@
     </Compile>
     <Compile Include="frm_pedidos.aspx.designer.cs">
       <DependentUpon>frm_pedidos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="mostrar_facturas.aspx.cs">
-      <DependentUpon>mostrar_facturas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="mostrar_facturas.aspx.designer.cs">
-      <DependentUpon>mostrar_facturas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -21,7 +21,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand">FIRPLAK S.A. </a>
+                <a class="navbar-brand"> FIRPLAK S.A. </a>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="frm_pedidos.aspx"> Pedidos </a>
@@ -34,9 +34,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="frm_facturacion.aspx"> Facturación </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mostrar_facturas.aspx"> Detalle Facturación </a>
                     </li>
                 </ul>
             </div>

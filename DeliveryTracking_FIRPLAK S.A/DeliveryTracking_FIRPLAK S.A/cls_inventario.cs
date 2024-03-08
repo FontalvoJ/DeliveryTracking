@@ -1,27 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 
 namespace DeliveryTracking_FIRPLAK_S.A
 {
     public class cls_inventario
     {
-        DataTable dt_prestamos = new DataTable();
-        cls_conexion obj_conectar = new cls_conexion();
-        public void fnt_consultar(string id)
-        {
-            cls_conexion objconexion = new cls_conexion();
-            SqlDataAdapter da = new SqlDataAdapter("SP_consultar_factura", objconexion.connection);
-            da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            da.SelectCommand.Parameters.AddWithValue("@id_persona", id);
-            objconexion.connection.Open();
-            da.Fill(dt_prestamos);
-            objconexion.connection.Close();
-        }
-        public DataTable getDt_prestamos() { return this.dt_prestamos; }
+        private readonly DataTable dt_inventario = new DataTable();
+        private readonly cls_conexion obj_conectar = new cls_conexion();
 
+        public void fnt_consultar(string id_facturacion)
+        {
+            try
+            {
+                using (SqlConnection connection = obj_conectar.connection)
+                {
+                    using (SqlDataAdapter da = new SqlDataAdapter("SP_consultar_factura", connection))
+                    {
+                        da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                        da.SelectCommand.Parameters.AddWithValue("@id_facturacion", id_facturacion);
+
+                        connection.Open();
+                        da.Fill(dt_inventario);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Error al consultar la base de datos: " + ex.Message);
+            }
+        }
+
+        public DataTable getDt_inventario()
+        {
+            return dt_inventario;
+        }
     }
 }
