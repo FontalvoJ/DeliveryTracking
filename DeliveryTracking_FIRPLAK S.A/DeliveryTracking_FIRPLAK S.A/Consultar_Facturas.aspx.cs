@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Data;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -34,7 +33,6 @@ namespace DeliveryTracking_FIRPLAK_S.A
                 dtg_facturas.Visible = true;
             }
         }
-
 
         protected void btn_nuevo_Click(object sender, EventArgs e)
         {
