@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Clientes </title>
+    <title> Clientes </title>
 
 
     <!-- Bootstrap CSS -->
@@ -24,22 +24,22 @@
                 <a class="navbar-brand">FIRPLAK S.A. </a>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="frm_pedidos">Pedidos </a>
+                        <a class="nav-link" href="frm_pedidos.aspx"> Pedidos </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="frm_clientes.aspx"> Registrar Clientes </a>
+                        <a class="nav-link" href="frm_clientes.aspx"> Clientes </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="frm_guias.aspx">Registro de Guias </a>
+                        <a class="nav-link" href="frm_guias.aspx"> Guias </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="frm_camiones.aspx">Registro de Camiones </a>
+                        <a class="nav-link" href="frm_camiones.aspx"> Camiones </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="frm_facturacion.aspx">Facturación </a>
+                        <a class="nav-link" href="frm_facturacion.aspx"> Facturación </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="frm_mostrar_facturas.aspx">Mostrar Facturación </a>
+                        <a class="nav-link" href="frm_mostrar_facturas.aspx"> Detalle Facturación </a>
                     </li>
                 </ul>
             </div>

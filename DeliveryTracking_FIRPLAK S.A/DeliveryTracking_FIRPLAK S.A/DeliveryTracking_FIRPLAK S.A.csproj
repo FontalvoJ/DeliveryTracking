@@ -70,12 +70,14 @@
     <Content Include="frm_camiones.aspx" />
     <Content Include="frm_clientes.aspx" />
     <Content Include="frm_facturacion.aspx" />
+    <Content Include="frm_pedidos.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cls_camiones.cs" />
     <Compile Include="cls_clientes.cs" />
     <Compile Include="cls_conexion.cs" />
+    <Compile Include="cls_pedido.cs" />
     <Compile Include="frm_camiones.aspx.cs">
       <DependentUpon>frm_camiones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -96,6 +98,13 @@
     </Compile>
     <Compile Include="frm_facturacion.aspx.designer.cs">
       <DependentUpon>frm_facturacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pedidos.aspx.cs">
+      <DependentUpon>frm_pedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_pedidos.aspx.designer.cs">
+      <DependentUpon>frm_pedidos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

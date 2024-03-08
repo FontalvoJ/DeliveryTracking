@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frm_camiones.aspx.cs" Inherits="DeliveryTracking_FIRPLAK_S.A.frm_camiones" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frm_pedidos.aspx.cs" Inherits="DeliveryTracking_FIRPLAK_S.A.frm_pedidos" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title> Camiones </title>
+    <title>Pedidos </title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
@@ -23,7 +23,7 @@
                 <a class="navbar-brand">FIRPLAK S.A. </a>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="frm_pedidos.aspx"> Pedidos </a>
+                        <a class="nav-link" href="frm_pedidos.aspx">Pedidos </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="frm_clientes.aspx"> Clientes </a>
@@ -51,36 +51,38 @@
             <div class="row">
                 <div class="col-md-6 offset-md-3">
                     <div class="mb-1">
-                        <h3>Registrar Camiones</h3>
+                        <h3>Registrar Pedidos</h3>
                     </div>
                     <div class="shadow p-4">
                         <div class="mb-1">
-                            <asp:TextBox ID="txt_id" placeholder="Id del Camion" class="form-control" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txt_id" placeholder="Id del Pedido" class="form-control" runat="server"></asp:TextBox>
                         </div>
 
-                        <div class="mb-1 row">
-                            <div class="col-md-6">
-                                <asp:TextBox ID="txt_placa" placeholder="Placa" class="form-control" runat="server"></asp:TextBox>
+                        <div class="mb-1">
+                            <asp:TextBox ID="txt_fechapedido" placeholder="Fecha del Pedido AAAA-MM-DD" class="form-control" runat="server"></asp:TextBox>
+                        </div>
+
+                        <div class="mb-1">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <asp:DropDownList ID="ddl_cliente" placeholder="Cliente" class="form-control" runat="server" DataSourceID="SqlDataSourceCliente" DataTextField="nombre" DataValueField="id_cliente"></asp:DropDownList>
+                                    <asp:SqlDataSource ID="SqlDataSourceCliente" runat="server" ConnectionString="<%$ ConnectionStrings:dbs_delivery_firplakConnectionString %>" ProviderName="<%$ ConnectionStrings:dbs_delivery_firplakConnectionString.ProviderName %>" SelectCommand="SELECT [id_cliente], [nombre] FROM [tbl_clientes]"></asp:SqlDataSource>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <asp:DropDownList ID="ddl_estadopedido" placeholder="Estado del Pedido" class="form-control" runat="server" DataSourceID="SqlDataSourceEstado_Pedido" DataTextField="descripcion" DataValueField="id"></asp:DropDownList>
+                                    <asp:SqlDataSource ID="SqlDataSourceEstado_Pedido" runat="server" ConnectionString="<%$ ConnectionStrings:dbs_delivery_firplakConnectionString2 %>" ProviderName="<%$ ConnectionStrings:dbs_delivery_firplakConnectionString2.ProviderName %>" SelectCommand="SELECT [id], [descripcion] FROM [tbl_estado_pedidos]"></asp:SqlDataSource>
+
+                                </div>
                             </div>
-
-                            <div class="col-md-6">
-                                <asp:TextBox ID="txt_marca" placeholder="Marca" class="form-control" runat="server"></asp:TextBox>
-                            </div>
                         </div>
 
                         <div class="mb-1">
-                            <asp:TextBox ID="txt_modelo" placeholder="Modelo" class="form-control" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txt_observaciones" placeholder="Observaciones" class="form-control" runat="server"></asp:TextBox>
                         </div>
 
-
-
                         <div class="mb-1">
-                            <asp:TextBox ID="txt_capacidad" placeholder="Capacidad" class="form-control" runat="server"></asp:TextBox>
-                        </div>
-
-
-                        <div class="mb-1">
-                            <asp:Button ID="btn_guardar" Text="Guardar" class="btn btn-dark btn-md mr-2" runat="server" OnClick="btn_guardar_Click1" />
+                            <asp:Button ID="btn_guardar" Text="Guardar" class="btn btn-dark btn-md mr-2" runat="server" OnClick="btn_guardar_Click" />
                         </div>
 
                         <div class="form-outline mb-1">
@@ -92,8 +94,9 @@
                         <p class="text-center mb-0">COPYRIGHT @FontalvoJ</p>
                     </div>
                 </div>
-        </div>
             </div>
+        </div>
     </form>
+
 </body>
 </html>
