@@ -77,6 +77,7 @@
     <Compile Include="cls_camiones.cs" />
     <Compile Include="cls_clientes.cs" />
     <Compile Include="cls_conexion.cs" />
+    <Compile Include="cls_facturacion.cs" />
     <Compile Include="cls_pedido.cs" />
     <Compile Include="frm_camiones.aspx.cs">
       <DependentUpon>frm_camiones.aspx</DependentUpon>

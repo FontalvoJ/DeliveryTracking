@@ -20,16 +20,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand">FIRPLAK S.A. </a>
+                <a class="navbar-brand"> FIRPLAK S.A. </a>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="frm_pedidos.aspx">Pedidos </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="frm_clientes.aspx"> Clientes </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="frm_guias.aspx"> Guias </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="frm_camiones.aspx"> Camiones </a>
@@ -65,11 +62,13 @@
                         <div class="mb-1">
                             <div class="row">
                                 <div class="col-md-6">
+                                     <label for="ddl_cliente">Cliente:</label>
                                     <asp:DropDownList ID="ddl_cliente" placeholder="Cliente" class="form-control" runat="server" DataSourceID="SqlDataSourceCliente" DataTextField="nombre" DataValueField="id_cliente"></asp:DropDownList>
                                     <asp:SqlDataSource ID="SqlDataSourceCliente" runat="server" ConnectionString="<%$ ConnectionStrings:dbs_delivery_firplakConnectionString %>" ProviderName="<%$ ConnectionStrings:dbs_delivery_firplakConnectionString.ProviderName %>" SelectCommand="SELECT [id_cliente], [nombre] FROM [tbl_clientes]"></asp:SqlDataSource>
 
                                 </div>
                                 <div class="col-md-6">
+                                     <label for="ddl_estadopedido">Estado Pedido:</label>
                                     <asp:DropDownList ID="ddl_estadopedido" placeholder="Estado del Pedido" class="form-control" runat="server" DataSourceID="SqlDataSourceEstado_Pedido" DataTextField="descripcion" DataValueField="id"></asp:DropDownList>
                                     <asp:SqlDataSource ID="SqlDataSourceEstado_Pedido" runat="server" ConnectionString="<%$ ConnectionStrings:dbs_delivery_firplakConnectionString2 %>" ProviderName="<%$ ConnectionStrings:dbs_delivery_firplakConnectionString2.ProviderName %>" SelectCommand="SELECT [id], [descripcion] FROM [tbl_estado_pedidos]"></asp:SqlDataSource>
 

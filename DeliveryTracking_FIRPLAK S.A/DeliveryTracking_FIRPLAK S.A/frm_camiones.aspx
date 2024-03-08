@@ -29,9 +29,6 @@
                         <a class="nav-link" href="frm_clientes.aspx"> Clientes </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="frm_guias.aspx"> Guias </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="frm_camiones.aspx"> Camiones </a>
                     </li>
                     <li class="nav-item">
