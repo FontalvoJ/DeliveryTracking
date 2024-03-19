@@ -15,15 +15,6 @@ namespace DeliveryTracking_FIRPLAK_S.A
     {
 
         /// <summary>
-        /// Control form1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
         /// Control txt_id.
         /// </summary>
         /// <remarks>
@@ -33,31 +24,49 @@ namespace DeliveryTracking_FIRPLAK_S.A
         protected global::System.Web.UI.WebControls.TextBox txt_id;
 
         /// <summary>
-        /// Control btn_consultar.
+        /// Control txt_placa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_consultar;
+        protected global::System.Web.UI.WebControls.TextBox txt_placa;
 
         /// <summary>
-        /// Control btn_nuevo.
+        /// Control txt_marca.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_nuevo;
+        protected global::System.Web.UI.WebControls.TextBox txt_marca;
 
         /// <summary>
-        /// Control dtg_facturas.
+        /// Control txt_modelo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dtg_facturas;
+        protected global::System.Web.UI.WebControls.TextBox txt_modelo;
+
+        /// <summary>
+        /// Control txt_capacidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_capacidad;
+
+        /// <summary>
+        /// Control btn_guardar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_guardar;
 
         /// <summary>
         /// Control lbl_mensaje.

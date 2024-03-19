@@ -18,7 +18,7 @@ namespace DeliveryTracking_FIRPLAK_S.A
         private string str_capacidad;
 
 
-        public void fnt_agregarclientes(string id_camion, string placa, string marca, string modelo, string capacidad)
+        public void fnt_agregarcamion(string id_camion, string placa, string marca, string modelo, string capacidad)
         {
             try
             {

@@ -9,8 +9,8 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-
 </head>
+
 <body class="overflow-hidden">
 
     <!-- Menú de navegación entre páginas-->
@@ -41,49 +41,55 @@
             </div>
         </div>
     </nav>
-
     <!-- Formulario -->
-    <form id="form1" runat="server">
-        <center>
-            <br />
+    <form runat="server">
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="mb-1">
+                        <h3>Registrar Camiones</h3>
+                    </div>
+                    <div class="shadow p-4">
+                        <div class="mb-1">
+                            <asp:TextBox ID="txt_id" placeholder="Id del Camion" class="form-control" runat="server"></asp:TextBox>
+                        </div>
 
-            <div class="div_control">
-                <h1 class="display-6">Detalle Facturación</h1>
-                <br />
-                <table class="table table-bordered table-striped">
-                    <tr>
-                        <td>
-                            <asp:TextBox ID="txt_id" runat="server" placeholder="Ingrese el id de la factura" CssClass="form-control" onkeydown="return (!(event.keyCode>=65) && event.keyCode!=32)" MaxLength="10"></asp:TextBox>
-                        </td>
-                        <td>
-                            <asp:Button ID="btn_consultar" runat="server" Text="Consultar registros" CssClass="btn btn-outline-success" OnClick="btn_consultar_Click" />
-                            <asp:Button ID="btn_nuevo" runat="server" Text="Nueva consulta" CssClass="btn btn-outline-warning" OnClick="btn_nuevo_Click" />
-                        </td>
-                    </tr>
-                </table>
+                        <div class="mb-1 row">
+                            <div class="col-md-6">
+                                <asp:TextBox ID="txt_placa" placeholder="Placa" class="form-control" runat="server"></asp:TextBox>
+                            </div>
 
-                <br />
-                <div>
-                    <asp:GridView ID="dtg_facturas" runat="server" CssClass="table" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="id_facturacion">
-                        <Columns>
-                            <asp:BoundField DataField="id_facturacion" HeaderText="Id Factura" ReadOnly="True" SortExpression="id_facturacion" />
-                            <asp:BoundField DataField="pedido" HeaderText="Id Pedido" SortExpression="pedido" />
-                            <asp:BoundField DataField="cliente" HeaderText="Id Cliente" SortExpression="cliente" />
-                            <asp:BoundField DataField="fecha_despacho" HeaderText="Despacho" SortExpression="fecha_despacho" />
-                            <asp:BoundField DataField="fecha_entrega" HeaderText="Entrega" SortExpression="fecha_entrega" />
-                            <asp:BoundField DataField="estado_entrega" HeaderText="Estado" SortExpression="estado_entrega" />
-                            <asp:BoundField DataField="camion" HeaderText="Id Camion" SortExpression="camion" />
-                            <asp:BoundField DataField="guia" HeaderText="N° Guia" SortExpression="guia" />
-                            <asp:BoundField DataField="podfirmado" HeaderText="POD" SortExpression="podfirmado" />
-                            <asp:BoundField DataField="Observaciones" HeaderText="Observaciones" SortExpression="Observaciones" />
-                        </Columns>
-                    </asp:GridView>
-                </div>
-                <div>
-                    <asp:Label ID="lbl_mensaje" runat="server" Text="Mensaje" Visible="False"></asp:Label>
+                            <div class="col-md-6">
+                                <asp:TextBox ID="txt_marca" placeholder="Marca" class="form-control" runat="server"></asp:TextBox>
+                            </div>
+                        </div>
+
+                        <div class="mb-1">
+                            <asp:TextBox ID="txt_modelo" placeholder="Modelo" class="form-control" runat="server"></asp:TextBox>
+                        </div>
+
+
+
+                        <div class="mb-1">
+                            <asp:TextBox ID="txt_capacidad" placeholder="Capacidad" class="form-control" runat="server"></asp:TextBox>
+                        </div>
+
+
+                        <div class="mb-1">
+                            <asp:Button ID="btn_guardar" Text="Guardar" class="btn btn-dark btn-md mr-2" runat="server" OnClick="btn_guardar_Click1" />
+                        </div>
+
+                        <div class="form-outline mb-1">
+                            <asp:Label ID="lbl_mensaje" runat="server" Text="" class="form-control form-control-sm"></asp:Label>
+                        </div>
+
+                        <hr>
+
+                        <p class="text-center mb-0">COPYRIGHT @FontalvoJ</p>
+                    </div>
                 </div>
             </div>
-        </center>
+        </div>
     </form>
 </body>
 </html>

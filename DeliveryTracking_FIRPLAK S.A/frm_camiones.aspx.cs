@@ -21,13 +21,15 @@ namespace DeliveryTracking_FIRPLAK_S.A
             cls_camiones objCamion = new cls_camiones();
 
             string id = txt_id.Text;
+
+
             string placa = txt_placa.Text;
             string marca = txt_marca.Text;
             string modelo = txt_modelo.Text;
             string capacidad = txt_capacidad.Text;
 
-
-            objCamion.fnt_agregarclientes(id, placa, marca, modelo, capacidad);
+            objCamion.fnt_agregarcamion(id, placa, marca, modelo, capacidad);
+          
 
             lbl_mensaje.Text = objCamion.getMensaje();
         }
